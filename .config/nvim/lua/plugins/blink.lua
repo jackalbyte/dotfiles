@@ -1,22 +1,17 @@
 return {
-  { "L3MON4D3/LuaSnip", keys = {} },
   {
     "saghen/blink.cmp",
     enabled = true,
-    dependencies = {
-      "rafamadriz/friendly-snippets",
-    },
     version = "*",
     config = function()
       require("blink.cmp").setup({
-        snippets = { preset = "luasnip" },
         signature = { enabled = true },
         appearance = {
           use_nvim_cmp_as_default = false,
           nerd_font_variant = "normal",
         },
         sources = {
-          default = { "lsp", "path", "snippets", "buffer" },
+          default = { "lsp", "path", "buffer" },
           providers = {
             cmdline = {
               min_keyword_length = 2,
@@ -59,8 +54,6 @@ return {
           },
         },
       })
-
-      require("luasnip.loaders.from_vscode").lazy_load()
     end,
   },
 }
