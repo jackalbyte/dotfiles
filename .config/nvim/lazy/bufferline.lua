@@ -1,7 +1,6 @@
 return {
   'akinsho/nvim-bufferline.lua',
   event = 'BufReadPre',
-  enabled = false,
   config = function()
     local default_opts = {}
     vim.keymap.set("n", "<leader><Tab>", ":BufferLinePick<CR>", default_opts)

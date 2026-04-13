@@ -93,3 +93,5 @@ vim.diagnostic.config({
     source = true,
   },
 })
+
+require("lsp.gopls")
