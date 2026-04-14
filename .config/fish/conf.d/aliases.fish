@@ -135,3 +135,10 @@ function gri
         end
     end
 end
+
+# Run claude code and rename tmux window
+function claude 
+    tmux rename-window "claude"
+    command claude $argv
+    tmux rename-window (basename $SHELL)
+end
