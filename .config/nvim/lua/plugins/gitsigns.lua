@@ -41,5 +41,8 @@ require("gitsigns").setup({
 
     -- Text object
     map({'o', 'x'}, 'ih', ':<C-U>Gitsigns select_hunk<CR>')
+
+    -- Blame
+    map('n', '<leader>vs', gs.blame)
   end
 })
