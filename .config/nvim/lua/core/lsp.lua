@@ -94,4 +94,4 @@ vim.diagnostic.config({
   },
 })
 
-require("lsp.gopls")
+--require("lsp.gopls")

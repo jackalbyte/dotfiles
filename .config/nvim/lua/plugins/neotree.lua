@@ -7,7 +7,7 @@ vim.pack.add({
 
 local builtin = require("neo-tree.command")
 
-vim.keymap.set("n", "\\\\", function()
+vim.keymap.set("n", "\\", function()
   builtin.execute({ toggle = true, reveal = true })
 end, { desc = "Toggle neo-tree" })
 

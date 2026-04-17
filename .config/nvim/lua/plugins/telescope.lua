@@ -52,6 +52,7 @@ vim.keymap.set("n", "<Leader>vh", builtin.git_bcommits, {})
 
 require("telescope").setup({
   defaults = {
+    borderchars = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
     layout_config = {
       horizontal = {
         prompt_position = "top",

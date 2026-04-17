@@ -17,6 +17,10 @@ vim.opt.updatetime = 50
 vim.opt.scrolloff = 8
 vim.opt.spelllang = 'en_us'
 vim.opt.spell = false
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+vim.opt.foldlevel = 99
+vim.opt.foldlevelstart = 99
 
 vim.o.splitright = true
-vim.o.winborder = 'rounded'
+vim.o.winborder = 'single'

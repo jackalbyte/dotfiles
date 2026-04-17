@@ -29,7 +29,7 @@ require("blink.cmp").setup({
   },
   completion = {
     menu = {
-      border = "rounded",
+      --border = "rounded",
       scrolloff = 1,
       scrollbar = false,
       draw = {
@@ -43,7 +43,7 @@ require("blink.cmp").setup({
     },
     documentation = {
       window = {
-        border = "rounded",
+        --border = "rounded",
         scrollbar = false,
         winhighlight = 'Normal:BlinkCmpDoc,FloatBorder:BlinkCmpDocBorder,EndOfBuffer:BlinkCmpDoc',
       },
