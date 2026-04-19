@@ -5,12 +5,17 @@ return {
     root_markers = { "go.mod", "go.work", ".git" },
     on_attach = function(client, bufnr)
       local opts = { buffer = bufnr }
+
       vim.keymap.set('n', 'gd', function()
         local params = vim.lsp.util.make_position_params()
-        vim.lsp.buf_request(bufnr, 'textDocument/definition', params, function(_, result, ctx, config)
-          if result and result[1] then
-            vim.lsp.util.jump_to_location(result[1], bufnr, {reuse_win = true})
-          end
+        vim.lsp.buf_request(bufnr, 'textDocument/definition', params, function(_, result)
+          if not result or vim.tbl_isempty(result) then return end
+
+          -- Handle both single Location and LocationLink[]
+          local location = vim.tbl_islist(result) and result[1] or result
+
+          -- Replacement for deprecated jump_to_location
+          vim.lsp.util.show_document(location, client.offset_encoding, { focus = true })
         end)
       end, opts)
     end,
