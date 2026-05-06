@@ -1,6 +1,8 @@
 alias cat='bat --paging=always --style=plain --color=always'
 alias l='ls -la'
 
+alias v='nvim'
+
 alias claude="/Users/user/.claude/local/claude"
 
 alias gemini-flash='GOOGLE_CLOUD_PROJECT="metro-markets-gemini-cli" GOOGLE_CLOUD_LOCATION="europe-west1" GEMINI_MODEL="gemini-2.5-flash" gemini'
