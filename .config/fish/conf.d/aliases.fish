@@ -5,8 +5,7 @@ alias v='nvim'
 
 alias claude="/Users/user/.claude/local/claude"
 
-alias gemini-flash='GOOGLE_CLOUD_PROJECT="metro-markets-gemini-cli" GOOGLE_CLOUD_LOCATION="europe-west1" GEMINI_MODEL="gemini-2.5-flash" gemini'
-alias gemini-pro='GOOGLE_CLOUD_PROJECT="metro-markets-gemini-cli" GOOGLE_CLOUD_LOCATION="europe-west1" GEMINI_MODEL="gemini-2.5-pro" gemini'
+alias lg='lazygit'
 
 alias dbl='docker build'
 alias dcin='docker container inspect'
