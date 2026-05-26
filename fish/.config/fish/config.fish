@@ -2,6 +2,10 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
+if test -f ~/.config/fish/config_local.fish
+    source ~/.config/fish/config_local.fish
+end
+
 set fish_greeting
 
 zoxide init fish | source
