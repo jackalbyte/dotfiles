@@ -7,7 +7,12 @@
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
+  "project_panel": {
+    "dock": "left"
+  },
+  "disable_ai": true,
   "git_panel": {
+    "dock": "left",
     "tree_view": true
   },
   "collaboration_panel": {
@@ -39,8 +44,8 @@
   "buffer_font_size": 14,
   "theme": {
     "mode": "system",
-    "light": "Alabaster",
-    "dark": "One Dark",
+    "light": "One Light",
+    "dark": "One Dark"
   },
   "telemetry": {
     "diagnostics": false,
