@@ -3,3 +3,6 @@
 
 # local fish configuration
 fish/.config/fish/config_local.fish
+
+# zed llm prompts
+zed/.config/zed/prompts/
