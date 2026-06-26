@@ -143,3 +143,10 @@ function claude
     command claude $argv
     tmux rename-window (basename $SHELL)
 end
+
+# Run pi and rename tmux window
+function pi 
+    tmux rename-window "pi"
+    command pi $argv
+    tmux rename-window (basename $SHELL)
+end
