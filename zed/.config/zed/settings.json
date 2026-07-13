@@ -33,6 +33,9 @@
   "base_keymap": "JetBrains",
   "show_edit_predictions": false,
   "agent": {
+    "dock": "right",
+    "enable_feedback": false,
+    "sidebar_side": "right",
     "default_profile": "write",
     "default_model": {
       "provider": "copilot_chat",
@@ -46,7 +49,7 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "One Dark"
+    "dark": "Alabaster Dark"
   },
   "telemetry": {
     "diagnostics": false,
