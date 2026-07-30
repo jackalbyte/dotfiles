@@ -16,11 +16,9 @@ shift
 # Loop through the ports and knock
 for port in "$@"; do
     echo "Knocking on port $port"
-    nc -w 1 -G 5 -z "$ip_address" "$port" > /dev/null 2>&1
-    if [ $? -ne 0 ]; then
-        echo "Error: Failed to knock port $port on $ip_address"
-        exit 1
-    fi
+    # Knock ports are usually closed, so nc commonly returns a non-zero status
+    # after sending the connection attempt. The attempt itself is the knock.
+    nc -w 1 -G 1 -z "$ip_address" "$port" > /dev/null 2>&1 || true
 done
 
 echo "Port knocking sequence completed successfully on $ip_address"
