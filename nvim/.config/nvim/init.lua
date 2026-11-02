@@ -5,7 +5,11 @@ require("config.netrw")
 require("core.lsp")
 
 require("plugins.blink")
-require("plugins.colorscheme")
+
+--colorthemes
+--require("plugins.rosepine")
+require("plugins.gruvbox")
+
 require("plugins.comment")
 require("plugins.gitsigns")
 --require("plugins.fugitive")
