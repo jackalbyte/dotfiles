@@ -9,9 +9,8 @@ vim.lsp.enable({
 vim.api.nvim_create_autocmd("LspAttach", {
   group = vim.api.nvim_create_augroup('lsp-attach', { clear = true }),
   callback = function(event)
-    -- defaults:
-    -- https://neovim.io/doc/user/news-0.11.html#_defaults
-    local opts = {}
+    local opts = { buffer = event.buf }
+    
     vim.keymap.set("n", "gv", function()
       vim.cmd('vsplit')
       vim.lsp.buf.definition()
@@ -21,8 +20,10 @@ vim.api.nvim_create_autocmd("LspAttach", {
     vim.keymap.set("n", "gi", function() vim.lsp.buf.implementation() end, opts)
     vim.keymap.set("n", "gr", function() vim.lsp.buf.references() end, opts)
     vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
+    
     vim.keymap.set("n", "]d", function() vim.diagnostic.goto_next() end, opts)
     vim.keymap.set("n", "[d", function() vim.diagnostic.goto_prev() end, opts)
+    
     vim.keymap.set("n", "<leader>a", function() vim.lsp.buf.code_action() end, opts)
     vim.keymap.set("n", "<leader>l", function() vim.lsp.codelens.run() end, opts)
     vim.keymap.set("n", "<leader>d", function() vim.diagnostic.open_float() end, opts)
@@ -44,7 +45,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
       }
       vim.keymap.set("n", "<leader>s", function() telescope.lsp_document_symbols(symbols_style) end, opts)
     end
-
     local function client_supports_method(client, method, bufnr)
       if vim.fn.has 'nvim-0.11' == 1 then
         return client:supports_method(method, bufnr)
