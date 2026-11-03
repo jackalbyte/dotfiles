@@ -6,3 +6,10 @@ fish/.config/fish/config_local.fish
 
 # zed llm prompts
 zed/.config/zed/prompts/
+
+# herdr runtime state and logs
+herdr/.config/herdr/*.log
+herdr/.config/herdr/.plugins.lock
+herdr/.config/herdr/*.sock*
+herdr/.config/herdr/session.json
+herdr/.config/herdr/session-snapshots/

@@ -68,3 +68,10 @@ help = "prefix+?"
 settings = "prefix+shift+comma"
 open_notification_target = "prefix+shift+o"
 
+
+# Project picker (like tmux-sessionizer)
+[[keys.command]]
+key = "prefix+f"
+type = "pane"
+command = "fish ~/.scripts/herdr-sessionizer.fish"
+description = "Projects"
