@@ -1,0 +1,36 @@
+id = "tab-index"
+name = "Tab index"
+version = "0.1.0"
+min_herdr_version = "0.9.5"
+description = "Prefix each tab label with its position, so prefix+N is easy to use."
+platforms = ["macos", "linux"]
+
+[[startup]]
+command = ["/bin/sh", "renumber.sh"]
+
+[[events]]
+on = "tab.created"
+command = ["/bin/sh", "renumber.sh"]
+
+[[events]]
+on = "tab.closed"
+command = ["/bin/sh", "renumber.sh"]
+
+# Closing the last pane with "exit" closes the tab without tab.closed.
+[[events]]
+on = "pane.exited"
+command = ["/bin/sh", "renumber.sh"]
+
+[[events]]
+on = "pane.closed"
+command = ["/bin/sh", "renumber.sh"]
+
+[[events]]
+on = "tab.moved"
+command = ["/bin/sh", "renumber.sh"]
+
+# Re-add the index after a manual rename. No loop: the script renames
+# only tabs whose label is wrong, so the second pass does nothing.
+[[events]]
+on = "tab.renamed"
+command = ["/bin/sh", "renumber.sh"]
