@@ -13,3 +13,7 @@ herdr/.config/herdr/.plugins.lock
 herdr/.config/herdr/*.sock*
 herdr/.config/herdr/session.json
 herdr/.config/herdr/session-snapshots/
+
+# herdr-app generated files inside mods
+herdr-app/.config/herdr-app/mods/*/gpui-kit.d.ts
+herdr-app/.config/herdr-app/mods/*/jsconfig.json
